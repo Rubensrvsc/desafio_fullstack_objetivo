@@ -1,0 +1,37 @@
+<%= render "admin/head" %>
+
+<div class="center_title_form">
+    <h1>Formulário de inscrição do Aluno</h1>
+</div>
+<div class="form_student">
+<%= form_with url: "/create_student", method: :post do |form| %>
+  <%= form.text_field :student_name, class: "form-control", placeholder: "Nome do estudante", required: true %>
+  <br>
+  <%= form.text_field :email, class: "form-control", placeholder: "Email do estudante", required: true %>
+  <br>
+  <%= form.text_field :cpf, class: "form-control", placeholder: "Cpf do estudante", required: true %>
+  <br>
+  <%= form.date_field :birth, required: true %>
+  <br>
+  <br>
+  <%= form.select :shift, options_for_select(['Manhã','Tarde', 'Noite']), {},class: "form-control", required: true%>
+  <br>
+  <%= form.number_field :serie, class: "form-control", placeholder: "Serie", required: true %>
+  <br>
+  <%= form.text_field :city, class: "form-control", placeholder: "Cidade do estudante", required: true %>
+  <br>
+  <%= form.text_field :state, class: "form-control", placeholder: "Estado do estudante", required: true %>
+  <br>
+  <%= form.text_field :responsible_name, class: "form-control", placeholder: "Nome do Responsável", required: true %>
+  <br>
+  <%= form.text_field :responsible_email, class: "form-control", placeholder: "Email do Responsável", required: true %>
+  <br>
+  <%= form.text_field :responsible_phone, class: "form-control", placeholder: "Telefone do responsável", required: true %>
+  <br>
+  <div class="center_title_form">
+  <%= button_tag(type: "submit", class: "btn btn-primary") do %>
+    Save <i class="icon-repeat"></i>
+<% end %>
+</div>
+<% end %>
+</div>
