@@ -1,11 +1,11 @@
 class StudentController < ApplicationController
+    include Container::Import[:create_inscription]
 
     def register_student
         @student = Student.new
     end
 
     def create
-        binding.pry
-        # Business::CreateInscription.new.call
+        create_inscription.call(params)
     end
 end
