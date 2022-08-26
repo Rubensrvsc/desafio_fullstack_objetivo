@@ -1,0 +1,23 @@
+<%= render "admin/head" %>
+
+<div class="boas_vindas">
+<h1>Bem vindo ao painel de administração</h1>
+</div>
+
+<div class="card_test">
+    <div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Alunos inscritos</h5>
+    <p class="card-text">Caso queira ver os alunos inscritos clique no link abaixo</p>
+    <%= link_to "Link", "/inscripts", class: "nav-link" %>
+  </div>
+</div>
+
+    <div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Alunos Matriculados</h5>
+    <p class="card-text">Caso queira ver os alunos Matriculados clique no link abaixo</p>
+    <%= link_to "Link", "/matriculates", class: "nav-link" %>
+  </div>
+</div>
+</div>

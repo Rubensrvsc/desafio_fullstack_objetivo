@@ -1,0 +1,31 @@
+<%= render "admin/head" %>
+
+<% if !@students_inscripts.present?%>
+    <h1>Ainda não há Estudantes Inscritos</h1>
+<% else %>
+
+<div>
+<h1>Lista de Estudantes Inscritos</h1>
+<table class="table table-striped table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Nome do Estudante
+            </th>
+            <th>Cpf</th>
+            <th>Ver detalhes</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @students_inscripts.each do |student| %>
+        <tr>
+            <td><%= student.student_name  %></td>
+            <td><%= student.cpf  %></td>
+            <td><%= link_to "Link", "/details/#{student.id}", class: "nav-link" %></td>
+        </tr>
+        <% end %>
+    </tbody>
+</table>
+
+</div>
+
+ <% end %>

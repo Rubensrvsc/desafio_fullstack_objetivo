@@ -3,3 +3,26 @@
     width: 100%;
     top: 0;
 }
+
+.boas_vindas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.matriculate_student{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card_test {
+    display:flex;
+    margin: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.card_test > div{
+    background-color: blanchedalmond;
+}

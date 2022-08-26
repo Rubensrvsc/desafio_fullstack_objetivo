@@ -1,0 +1,30 @@
+<%= render "admin/head" %>
+
+
+<div>
+    <h1>Detalhes do aluno</h1>
+    <table class="table table-striped table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Cpf</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><%= @student_details.student_name  %></td>
+            <td><%= @student_details.email  %></td>
+            <td><%= @student_details.cpf  %></td>
+        </tr>
+    </tbody>
+</table>
+
+<% if !@student_details.status %>
+    <div class="matriculate_student">
+        <p>Aluno não matriculado, deseja matricular?</p>
+        <br>
+        <%= button_to "Matricular aluno", { :controller => "admin", :action => "matriculate_student", id: @student_details.id}, class: 'btn btn-danger' %>
+    </div>
+<% end %>
+</div>

@@ -5,32 +5,66 @@
 </div>
 <div class="form_student">
 <%= form_with url: "/create_student", method: :post do |form| %>
-  <%= form.text_field :student_name, class: "form-control", placeholder: "Nome do estudante", required: true %>
+  <div>
+  <%= form.label :Nome_do_estudante %>:
+  <%= form.text_field :student_name, class: "form-control", required: true %>
+  </div>
+  <div>
+  <%= form.label :Email_do_estudante %>:
+  <%= form.text_field :email, class: "form-control", required: true %>
+  </div>
+  <div>
+  <%= form.label :Cpf_do_estudante %>:
+    <%= form.text_field :cpf, class: "form-control", required: true %>
+  </div>
   <br>
-  <%= form.text_field :email, class: "form-control", placeholder: "Email do estudante", required: true %>
-  <br>
-  <%= form.text_field :cpf, class: "form-control", placeholder: "Cpf do estudante", required: true %>
-  <br>
-  <%= form.date_field :birth, required: true %>
-  <br>
-  <br>
-  <%= form.select :shift, options_for_select(['Manhã','Tarde', 'Noite']), {},class: "form-control", required: true%>
-  <br>
-  <%= form.number_field :serie, class: "form-control", placeholder: "Serie", required: true %>
-  <br>
-  <%= form.text_field :city, class: "form-control", placeholder: "Cidade do estudante", required: true %>
-  <br>
-  <%= form.text_field :state, class: "form-control", placeholder: "Estado do estudante", required: true %>
-  <br>
-  <%= form.text_field :responsible_name, class: "form-control", placeholder: "Nome do Responsável", required: true %>
-  <br>
-  <%= form.text_field :responsible_email, class: "form-control", placeholder: "Email do Responsável", required: true %>
-  <br>
-  <%= form.text_field :responsible_phone, class: "form-control", placeholder: "Telefone do responsável", required: true %>
-  <br>
+  <div>
+    <%= form.label :Data_de_nascimento %>:
+    <%= form.date_field :birth, required: true %>
+  </div>
+<br>
+  <div>
+    <%= form.label :Turno %>:
+    <%= form.select :shift, options_for_select(['Manhã','Tarde', 'Noite']), {},class: "form-control", required: true%>
+  </div>
+  
+  <div>
+    <%= form.label :Serie %>:
+    <%= form.number_field :serie, class: "form-control", required: true %>
+  </div>
+
+  <div>
+    <%= form.label :Cidade_do_estudante %>:
+    <%= form.text_field :city, class: "form-control", required: true %>
+  </div>
+
+  <div>
+  <%= form.label :Estado_do_esrudante %>:
+  <%= form.text_field :state, class: "form-control", required: true %>
+    
+  </div>
+
+  <div>
+  <%= form.label :Nome_do_responsável %>:
+  <%= form.text_field :responsible_name, class: "form-control", required: true %>
+    
+  </div>
+
+  <div>
+  <%= form.label :Email_do_responsável %>:
+  <%= form.text_field :responsible_email, class: "form-control", required: true %>
+    
+  </div>
+
+  <div>
+  <%= form.label :Telefone_do_reponsável %>:
+  <%= form.text_field :responsible_phone, class: "form-control", required: true %>
+    
+  </div>
+<br>
   <div class="center_title_form">
   <%= button_tag(type: "submit", class: "btn btn-primary") do %>
-    Save <i class="icon-repeat"></i>
+    Finalizar inscrição <i class="icon-repeat"></i>
 <% end %>
 </div>
 <% end %>
