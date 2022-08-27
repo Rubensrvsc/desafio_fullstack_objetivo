@@ -1,4 +1,4 @@
-<%= render "admin/head" %>
+<%= render "admin_header" %>
 
 <% if !@students_inscripts.present?%>
     <h1>Ainda não há Estudantes Inscritos</h1>
@@ -25,7 +25,22 @@
         <% end %>
     </tbody>
 </table>
+<div class="paginate">
+    <%= paginate @students_inscripts %>
+</div>
+</div>
 
+<%
+=begin%>
+ <%= button_to "Report", { :controller => "admin", :action => "download_csv" }, class: 'btn btn-danger' %> 
+<%
+=end%>
+<div class="boas_vindas">
+    <h3>Download csv dos inscritos</h3>
+</div>
+
+<div class="boas_vindas">
+    <%= link_to "Download", inscripts_path(format: 'csv'), class: 'btn btn-primary' %>
 </div>
 
  <% end %>
