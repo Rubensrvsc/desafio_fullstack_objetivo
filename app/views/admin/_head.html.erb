@@ -5,12 +5,10 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-    <%= link_to "Login", "/users/sign_in", class: "navbar-brand" %>
-    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-      <li class="nav-item active">
-        <%= link_to "Ver Listagem", "/congress/list", class: "nav-link" %>
-      </li>
-    </ul>
+    <%= link_to "Home", "/", class: "navbar-brand" %>
+  </div>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+    <%= link_to "É admin? Faça o login", "/users/sign_in", class: "navbar-brand" %>
   </div>
 </nav>
 </div>
