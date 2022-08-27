@@ -1,4 +1,4 @@
-<%= render "admin/head" %>
+<%= render "admin_header" %>
 
 <% if !@students_matriculates.present?%>
     <h1>Ainda não há Estudantes Matriculados</h1>
@@ -25,6 +25,9 @@
         <% end %>
     </tbody>
 </table>
+<div class="paginate">
+    <%= paginate @students_matriculates %>
+</div>
 
 </div>
 

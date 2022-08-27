@@ -11,8 +11,8 @@ module Business
             Success(student_matriculate)
         end
 
-        def get_student(id)
-            student = Student.find_by(id: params[:id])
+        def get_student(id_student)
+            student = Student.find_by(id: id_student)
             Success(student)
         end
 
