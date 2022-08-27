@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
+  resources :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
@@ -10,4 +11,6 @@ Rails.application.routes.draw do
   get "matriculates", to: "admin#matriculates"
   get "details/:id", to: 'admin#student_details'
   post "matricular_aluno", to: "admin#matriculate_student"
+  get "download_csv", to: "admin#download_csv"
+  get "confirmation", to: "student#confirmation_register"
 end
