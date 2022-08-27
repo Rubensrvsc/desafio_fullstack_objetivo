@@ -1,5 +1,5 @@
 class AdminController < ApplicationController
-    # before_action :authenticate_user!, only: %[matriculate_student]
+    before_action :authenticate_user!
     include Container::Import[:repo, :create_matriculation]
 
     def index
@@ -7,11 +7,16 @@ class AdminController < ApplicationController
     end
 
     def inscripts
-        @students_inscripts = repo.students_inscripts
+        @students_inscripts = repo.students_inscripts(params[:page])
+
+        respond_to do |format|
+          format.html
+          format.csv { send_data repo.csv_inscripts, filename: "users-#{Date.today}.csv" }
+        end
     end
 
     def matriculates
-        @students_matriculates = repo.students_matriculates
+        @students_matriculates = repo.students_matriculates(params[:page])
     end
 
     def student_details
