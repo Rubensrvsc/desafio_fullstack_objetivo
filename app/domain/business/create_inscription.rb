@@ -16,7 +16,7 @@ module Business
             student = Student.find_by(cpf: params[:cpf])
 
             if student.present?
-                return Failure('Cpf já cadastrado')
+                return Failure('Cpf já cadastrado: Insira um cpf não cadastrado')
             end
 
             Success(params)
