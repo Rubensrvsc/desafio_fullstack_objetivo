@@ -61,6 +61,14 @@ bundle exec rails db:migrate
 ```
 
 ```
+Para criar o seed
+bundle exec rails db:seed
+Com esse comando será criado o usuário necessário para entrar na aplicação
+email: janairo@gmail.com
+password: janairo123
+```
+
+```
 Para rodar o projeto
 bundle exec rails server
 ```
@@ -89,6 +97,14 @@ docker-compose run --rm web rails db:migrate
 ```
 
 ```
+Para criar o seed
+docker-compose run --rm web rails db:seed
+Com esse comando será criado o usuário necessário para entrar na aplicação
+email: janairo@gmail.com
+password: janairo123
+```
+
+```
 Para rodar o projeto
 docker-compose up
 ```
@@ -99,6 +115,10 @@ docker-compose run --rm web rspec spec
 ```
 
 ### heroku
+
+```
+Em produção o usuário com o mesmo email e password já está criado
+```
 
 ```
 O projeto no heroku encontra-se na seguinte URL
