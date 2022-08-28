@@ -30,6 +30,10 @@ Dry-Auto-Inject: Para injeção de depêndencia
 | POST | `/matricular_aluno/` | Matricula um aluno |
 | POST | `/download_csv/` | Download do csv dos alunos inscritos |
 
+#### Observações
+- Apenas a rota **/** não requer autenticação
+- Para fazer o download do csv dos inscritos é necessário estar autenticado e ir na rota **/inscripts/**
+
 ## Como rodar o projeto
 
 ### Primeiro faça o clone do projeto
